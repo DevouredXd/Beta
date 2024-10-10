@@ -1,10 +1,11 @@
 // Plugin manifest
 const manifest = {
-    name: "Auto Status Changer",
-    author: "DevouredXd",
-    description: "Automatically changes Discord status at a safe rate.",
-    version: "1.0.0",
-    type: "plugin"
+    name: "Auto Discord Status Changer", // Name of the plugin
+    author: "DevouredXd",                 // Your name or alias
+    description: "Automatically changes Discord status at a safe rate.", // Description of the plugin
+    version: "1.0.0",                     // Version of the plugin
+    type: "plugin",                       // Type of the script (should be "plugin")
+    main: "Auto-discord-status-changer-beta.js", // The main file of the plugin
 };
 
 let statusInterval;
@@ -17,7 +18,7 @@ function changeStatus() {
 
 function startAutoStatusChange() {
     if (!statusInterval) {
-        statusInterval = setInterval(changeStatus, 15000); // Change every 15 seconds
+        statusInterval = setInterval(changeStatus, 15000); // Change status every 15 seconds
         console.log("Auto status change started.");
     }
 }
